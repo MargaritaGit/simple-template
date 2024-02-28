@@ -1,0 +1,71 @@
+.stage {
+    background-color: $primaryColor;
+    padding: 5rem 0;
+    @include section();
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+
+        // @media ($tablet) {
+        @media (min-width: 900px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+    }
+
+    &__img-cont {
+        width: 100%;
+        height: 21.4rem;
+        background-color: $white;
+        margin-bottom: 2rem;
+        flex-shrink: 2;
+
+        @media ($tablet) {
+            width: 80%;
+        }
+
+        @media (min-width: 900px) {
+
+            max-width: 36.9rem;
+        }
+
+        @media ($desktop) {
+            max-width: 46.9rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        @include h1();
+    }
+
+    &__list {
+        @include lead();
+        padding-left: 3rem;
+        position: relative;
+
+
+        &-item {
+            list-style: none;
+
+            &::before {
+                content: '\f00c';
+                font-family: 'FontAwesome';
+                font-size: 2rem;
+                // font-weight: 700;
+                // font-style: normal;
+                // padding-right: 2rem;
+                position: absolute;
+                left: 0;
+
+
+
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.features {
+    @include section();
+    background-color: $lightGray;
+
+    &__title {
+        @include h2();
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
+        @media ($tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 2.5rem;
+            column-gap: 2.2rem;
+        }
+
+        @media ($desktop) {
+            row-gap: 3.5rem;
+        }
+
+        .feature {
+            @media ($tablet) {
+                flex-basis: calc(50% - 1.1rem);
+
+
+            }
+
+        }
+    }
+}

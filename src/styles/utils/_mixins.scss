@@ -1,0 +1,118 @@
+@mixin h1($_color: $white) {
+    font-size: 4rem;
+    color: $_color;
+    font-family: $mainFont;
+    font-weight: normal;
+    text-shadow: $mainShadow;
+    margin-bottom: 2rem;
+
+    @media ($tablet) {
+        font-size: 5.9rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@mixin h2($_color: $primaryColor, $_align: center) {
+    color: $_color;
+    font-size: 3rem;
+    text-align: $_align;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
+
+@mixin h3($_color: $primaryColor) {
+    color: $_color;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: normal;
+}
+
+@mixin p1($_color: $textColor) {
+    font-size: 1.6rem;
+    color: $_color;
+    line-height: 1.5;
+}
+
+@mixin p2($_color: $textColor) {
+    font-size: 1.4rem;
+    color: $_color;
+    line-height: 1.29;
+}
+
+@mixin lead($_color: $white) {
+    color: $_color;
+    font-size: 2rem;
+    line-height: 1.8;
+    text-shadow: $mainShadow;
+}
+
+@mixin img() {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@mixin section($_pt: 5rem, $_pb: 5rem) {
+    padding-top: $_pt;
+    padding-bottom: $_pb;
+}
+
+%btn {
+    display: inline-block;
+    background-color: $white;
+    color: $primaryColor;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    // width: 26rem;
+    // height: 4rem;
+    padding: 1.4rem 4.8rem;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: darken($color: $white, $amount: 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+%input {
+    color: $primaryColor;
+    font-size: 1.6rem;
+    line-height: 1;
+    background-color: $white;
+    padding: 1.4rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+
+    &:focus {
+        outline: none;
+        outline: 2px solid #11157a;
+    }
+
+    &::placeholder {
+        color: $secondaryColor;
+    }
+}
+
+%textarea {
+    @extend %input;
+    resize: none;
+    height: 17rem;
+
+}
+
+%list {
+    font-size: 16px;
+    color: $white;
+}

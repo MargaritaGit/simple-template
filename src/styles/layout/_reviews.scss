@@ -1,0 +1,18 @@
+.reviews {
+    @include section();
+    background-color: $gray2;
+
+    &__title {
+        @include h2();
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.4rem 3.2rem;
+
+        @media ($tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

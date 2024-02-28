@@ -1,0 +1,28 @@
+.prices {
+    @include section();
+    background-color: $white;
+
+    &__title {
+        @include h2();
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        // gap: 4.5rem;
+        // gap: min(calc(100vw * (4.5 / 118)), 4.5rem);
+        gap: (100% * (4.5 / 118));
+        row-gap: 3rem;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+
+        @media ($desktop) {
+            flex-direction: row;
+            align-items: end;
+            // column-gap: 4.5rem;
+            justify-content: center;
+        }
+    }
+}

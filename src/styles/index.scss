@@ -1,0 +1,17 @@
+@import "./utils";
+@import "./components";
+@import "./layout";
+
+.wrapper {
+    width: 96%;
+    max-width: 118rem;
+    margin: 0 auto;
+}
+
+img {
+    @include img();
+}
+
+h1 {
+    @include h1();
+}

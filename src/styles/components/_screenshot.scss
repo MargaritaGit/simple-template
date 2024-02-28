@@ -1,0 +1,49 @@
+.screenshot {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media ($desktop) {
+        flex-direction: row;
+    }
+
+    &__image {
+        width: 100%;
+        height: 25rem;
+        background-color: $primaryColor;
+
+        @media ($tablet) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media ($desktop) {
+            // flex-shrink: 0;
+            width: 21rem;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @media ($tablet) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media ($desktop) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        @include h3();
+        margin-bottom: 1rem;
+        margin-top: -0.5rem;
+    }
+
+    &__desc {
+        @include p1();
+    }
+}

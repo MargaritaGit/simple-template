@@ -1,0 +1,135 @@
+.contacts {
+    @include section();
+    background-color: $primaryColor;
+
+    &__title {
+        @include h2($_color: $white);
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 4.6rem;
+        flex-direction: column;
+        align-items: center;
+
+        @media ($tablet) {
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.1rem;
+        align-items: stretch;
+        width: 80%;
+
+        @media ($tablet) {
+            width: 50rem;
+        }
+    }
+
+    &__input {
+        @extend %input;
+    }
+
+    &__textarea {
+        @extend %textarea;
+    }
+
+    &__btn {
+        @extend %btn;
+        align-self: center;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    &__list {
+        @extend %list;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+
+        @media ($tablet) {
+            align-items: flex-start;
+        }
+
+        &-item {
+            // margin-bottom: 3rem;
+
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
+            &:nth-child(1) {
+                order: 2;
+
+                @media ($tablet) {
+                    order: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                order: 1;
+
+                @media ($tablet) {
+                    order: 0;
+                }
+            }
+
+            a {
+                color: $white;
+            }
+
+            a,
+            a::before {
+                vertical-align: middle;
+            }
+
+            a::before {
+                font-family: 'FontAwesome';
+                font-size: 2.5rem;
+                color: $white;
+                margin-right: 0.5rem;
+            }
+
+            .skype::before {
+                content: '\f17e';
+
+            }
+
+            .telegram::before {
+                content: '\f2c6';
+            }
+
+            .mail::before {
+                content: '\40';
+            }
+
+            .phone::before {
+                content: '\f879';
+            }
+        }
+    }
+
+    &__social {
+        @media ($tablet) and (width < 880px) {
+            // margin-left: -8rem;
+            // margin-top: 13rem;
+            text-align: center;
+            width: 20rem;
+
+            .social__icon {
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+}

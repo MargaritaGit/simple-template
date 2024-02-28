@@ -1,0 +1,9 @@
+.social {
+    &__icon {
+        font-family: $iconFont;
+        font-size: 6rem;
+        letter-spacing: 5px;
+        color: $white;
+        text-decoration: none;
+    }
+}
